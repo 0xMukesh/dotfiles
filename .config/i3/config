@@ -57,16 +57,10 @@ bindsym $mod+q kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindcode $mod+40 exec "rofi -modi drun,run,window -show window"
+# bindcode $mod+40 exec "rofi -modi drun,run,window -show window"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -186,6 +180,8 @@ mode "resize" {
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
+bindsym $mod+l exec --no-startup-id ~/.config/i3/lock.sh
 
 # colors
 set $rosewater #f5e0dc
