@@ -9,8 +9,3 @@
 !.config/fish/
 !.config/nvim/
 !.config/rofi/
-.local/*
-!.local/share/
-.local/share/*
-!.local/share/icons/
-!.local/share/themes/
